@@ -1,0 +1,33 @@
+{
+  "name": "chitchatHybrid",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "ios": "react-native run-ios",
+    "android": "react-native run-android",
+    "test": "jest",
+    "lint": "eslint app/index.js",
+    "postinstall": "rndebugger-open"
+  },
+  "dependencies": {
+    "firebase-tools": "^3.17.7",
+    "global": "^4.3.2",
+    "react": "^16.3.0-alpha.1",
+    "react-native": "0.54.3",
+    "react-native-firebase": "^3.3.1",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "babel-jest": "22.4.3",
+    "babel-preset-react-native": "4.0.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "22.4.3",
+    "react-native-debugger-open": "^0.3.17",
+    "react-test-renderer": "^16.3.0-alpha.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

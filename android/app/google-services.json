@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1083247655157",
+    "firebase_url": "https://chitchathybrid.firebaseio.com",
+    "project_id": "chitchathybrid",
+    "storage_bucket": "chitchathybrid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083247655157:android:76e8a2e4a23ceea6",
+        "android_client_info": {
+          "package_name": "com.chitchathybrid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1083247655157-6khnl0bl0rl6l4ss1dk996ddgb6kan9t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwyCZmWdJxfLEu1XsBrXecz7K-iyMPI6k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
