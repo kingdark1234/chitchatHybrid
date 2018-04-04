@@ -6,55 +6,46 @@
 
 import React, { Component } from 'react';
 import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
+	Text,
+	View,
+	TouchableOpacity
 } from 'react-native';
-import firebase from 'react-native-firebase';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import styles from './App.style';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import {facebook} from '../app/redux/actions/index.action';
 
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-console.log(firebase.database().app.name);
-export default class App extends Component{
-  
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-      </View>
-    );
-  }
+ class App extends Component{
+
+	_SignFacebook = () => this.props.signFacebook();
+
+	render() {
+		return (
+			<View style={styles.container}>
+				<Text>Please SignIn</Text>
+        <Icon.Button name="facebook" backgroundColor="#3b5998" onPress={this._SignFacebook}>
+          Login with Facebook
+        </Icon.Button>
+        <Icon.Button name="google" backgroundColor="#db4437">
+          Login with Google+
+        </Icon.Button>
+        <Icon.Button name="envelope" backgroundColor="#ddd">
+          Login with Email
+        </Icon.Button>
+				{/* <TouchableOpacity class={}><Icon name="social-facebook" color="#fff" />Facebook</TouchableOpacity>
+				<TouchableOpacity class={styles.google}><Icon name="social-social-google-plus" color="#fff" />Google</TouchableOpacity>
+				<TouchableOpacity class={styles.email}><Icon name="mail" color="#fff" />Email</TouchableOpacity> */}
+			</View>
+		);
+	}
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+
+export const mapDispatchToProps = (dispatch) => ({
+  signFacebook: bindActionCreators(facebook, dispatch)
 });
+
+export default connect((storeState)=>{return{}},mapDispatchToProps)(App);
+

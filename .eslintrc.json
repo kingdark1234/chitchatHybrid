@@ -1,7 +1,7 @@
 {
+    "parser": "babel-eslint",
     "env": {
-        "browser": true,
-        "es6": true
+        "browser": true
     },
     "extends": ["eslint:recommended","plugin:react/recommended"],
     "parserOptions": {
@@ -12,7 +12,10 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "react-native",
+        "sort-imports-es6-autofix",
+        "eslint-plugin-import"
     ],
     "rules": {
         "react/jsx-uses-react": "error",
@@ -42,7 +45,10 @@
           "version": "15.0", // React version, default to the latest React stable release
           "flowVersion": "0.53" // Flow version
         },
-        "propWrapperFunctions": [ "forbidExtraProps" ] // The names of any functions used to wrap the
+        "propWrapperFunctions": [ "forbidExtraProps" ],
+        "import/ignore": [".util","node_modules"], 
+        "import/core-modules": ["resolveAssetSource"] 
+                                                     // The names of any functions used to wrap the
                                                        // propTypes object, e.g. `forbidExtraProps`.
                                                        // If this isn't set, any propTypes wrapped in
                                                        // a function will be skipped.

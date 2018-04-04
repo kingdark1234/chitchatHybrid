@@ -15,6 +15,10 @@ target 'chitchatHybrid' do
   pod 'Firebase/RemoteConfig'
   pod 'Firebase/Database'
 
+
+
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'chitchatHybridTests' do
     inherit! :search_paths
     # Pods for testing
